@@ -1,5 +1,5 @@
 # Segues-AfterHours
-CC's After Hours project with more practice on segues
+CC's After Hours project with more practice on stack views, constraints, and segues. 
 
 Begin by forking and cloning this repository. 
 
