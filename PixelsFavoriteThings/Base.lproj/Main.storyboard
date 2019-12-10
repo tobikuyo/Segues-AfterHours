@@ -39,9 +39,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="cxu-fN-kuG" kind="show" identifier="ShowTreatDetailSegue" id="q2P-Zg-DRY"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,11 +47,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pixel's Favorite Things" id="ELT-5d-B2t">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kzg-h3-9M8">
-                            <connections>
-                                <segue destination="EXC-vH-YRz" kind="show" identifier="ShowAddTreatSegue" id="hrQ-Wg-LCv"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kzg-h3-9M8"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoJ-dA-mfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S2z-O0-vFF">
-                                <rect key="frame" x="40" y="128" width="74.5" height="146"/>
+                                <rect key="frame" x="40" y="84" width="74.5" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHH-eH-CN9">
                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="21.5"/>
@@ -99,7 +92,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAy-La-TPb">
-                                <rect key="frame" x="130.5" y="128" width="63.5" height="146"/>
+                                <rect key="frame" x="130.5" y="84" width="63.5" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-Nm-Tq8">
                                         <rect key="frame" x="0.0" y="0.0" width="63.5" height="21.5"/>
@@ -144,7 +137,6 @@
                                         <connections>
                                             <action selector="doneButton:" destination="TG4-2i-i87" eventType="touchUpInside" id="Mfe-es-wql"/>
                                             <action selector="doneButton:" destination="JAc-Tz-l2J" eventType="touchUpInside" id="xyP-bf-Kz5"/>
-                                            <segue destination="cDI-Rw-Cth" kind="showDetail" id="bNa-NY-VM5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1i-zT-MAt">
@@ -161,9 +153,6 @@
                                         <connections>
                                             <action selector="doneButton:" destination="TG4-2i-i87" eventType="touchUpInside" id="F1U-W6-297"/>
                                             <action selector="doneButton:" destination="JAc-Tz-l2J" eventType="touchUpInside" id="tHt-fc-Xwg"/>
-                                            <segue destination="j2u-vH-iuA" kind="popoverPresentation" popoverAnchorView="F1i-zT-MAt" id="l7r-9R-e5P">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -228,11 +217,11 @@
             <objects>
                 <viewController id="cDI-Rw-Cth" customClass="ShowDetailViewController" customModule="PixelsFavoriteThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZW-YC-Ms9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="xWj-Wo-gyT">
-                                <rect key="frame" x="58" y="369" width="298" height="104"/>
+                                <rect key="frame" x="58" y="396" width="298" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a Show Detail Segue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P72-ap-goY">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="29"/>
@@ -277,11 +266,11 @@
             <objects>
                 <viewController id="j2u-vH-iuA" customClass="PresentPopoverViewController" customModule="PixelsFavoriteThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="033-Aa-AbD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="uzu-eO-atr">
-                                <rect key="frame" x="65" y="356.5" width="284.5" height="129"/>
+                                <rect key="frame" x="65" y="383.5" width="284.5" height="129"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present as Popover Segue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbI-mk-5OS">
                                         <rect key="frame" x="0.0" y="0.0" width="284.5" height="29"/>
@@ -319,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWW-vu-RlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583" y="1179"/>
+            <point key="canvasLocation" x="2583" y="1120"/>
         </scene>
         <!--Add Treat View Controller-->
         <scene sceneID="eFZ-DA-1Yz">
@@ -330,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lHa-89-bL6">
-                                <rect key="frame" x="40" y="128" width="74.5" height="146"/>
+                                <rect key="frame" x="40" y="84" width="74.5" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsq-xG-tE5">
                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="21.5"/>
@@ -359,7 +348,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OH7-My-N10">
-                                <rect key="frame" x="126.5" y="128" width="200" height="160"/>
+                                <rect key="frame" x="126.5" y="84" width="200" height="160"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-Ha-VVi">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -400,7 +389,6 @@
                                 <connections>
                                     <action selector="doneButton:" destination="JAc-Tz-l2J" eventType="touchUpInside" id="85V-f5-dQG"/>
                                     <action selector="doneButton:" destination="TG4-2i-i87" eventType="touchUpInside" id="Tr8-QH-s4T"/>
-                                    <segue destination="TG4-2i-i87" kind="presentation" modalTransitionStyle="crossDissolve" id="mGK-ZO-Jdc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -433,26 +421,26 @@
             <objects>
                 <viewController id="TG4-2i-i87" customClass="ConfirmTreatViewController" customModule="PixelsFavoriteThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htX-aD-wEr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="xOg-cC-6aO">
-                                <rect key="frame" x="54" y="333.5" width="306" height="175.5"/>
+                                <rect key="frame" x="48" y="360.5" width="318" height="175.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pixel's Happy Tummy Meter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiB-kD-qXk">
-                                        <rect key="frame" x="36" y="0.0" width="234" height="21.5"/>
+                                        <rect key="frame" x="42" y="0.0" width="234" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-3Z-SLN">
-                                        <rect key="frame" x="18" y="57.5" width="270" height="31"/>
+                                        <rect key="frame" x="18" y="57.5" width="282" height="31"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" destination="TG4-2i-i87" eventType="valueChanged" id="NZ9-Sf-xjW"/>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlC-N1-GmC">
-                                        <rect key="frame" x="78" y="123.5" width="150" height="52"/>
+                                        <rect key="frame" x="84" y="123.5" width="150" height="52"/>
                                         <color key="backgroundColor" red="0.48271618150000001" green="0.72294656940000002" blue="0.78638698630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="091-MO-fc2"/>
