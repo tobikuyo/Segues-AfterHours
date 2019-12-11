@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cxu-fN-kuG" kind="show" identifier="ShowTreatDetailSegue" id="Pv7-2g-uty"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Pixel's Favorite Things" id="ELT-5d-B2t">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kzg-h3-9M8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kzg-h3-9M8">
+                            <connections>
+                                <segue destination="EXC-vH-YRz" kind="show" identifier="ShowAddTreatSegue" id="yjc-9X-QZA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoJ-dA-mfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S2z-O0-vFF">
-                                <rect key="frame" x="40" y="84" width="74.5" height="146"/>
+                                <rect key="frame" x="40" y="128" width="74.5" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHH-eH-CN9">
                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="21.5"/>
@@ -92,7 +99,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAy-La-TPb">
-                                <rect key="frame" x="130.5" y="84" width="63.5" height="146"/>
+                                <rect key="frame" x="130.5" y="128" width="63.5" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-Nm-Tq8">
                                         <rect key="frame" x="0.0" y="0.0" width="63.5" height="21.5"/>
@@ -335,7 +342,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MVk-Lf-56y" userLabel="Labels Stack View">
-                                <rect key="frame" x="40" y="84" width="72.5" height="160"/>
+                                <rect key="frame" x="40" y="128" width="72.5" height="160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cm-Xz-jbO">
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="28"/>
@@ -364,7 +371,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ogK-bB-uZW" userLabel="TextField Stack View">
-                                <rect key="frame" x="128.5" y="84" width="200" height="160"/>
+                                <rect key="frame" x="128.5" y="128" width="200" height="160"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3o-iJ-OQP">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -406,6 +413,12 @@
                         <viewLayoutGuide key="safeArea" id="JXP-j9-Veg"/>
                     </view>
                     <navigationItem key="navigationItem" id="C5e-RV-9s1"/>
+                    <connections>
+                        <outlet property="amountOfTreatsTexrField" destination="f3s-Rv-oMh" id="S6f-0s-KZy"/>
+                        <outlet property="flavorTextField" destination="QST-nG-y5t" id="Rgq-F4-U6h"/>
+                        <outlet property="nameTextField" destination="e3o-iJ-OQP" id="hVg-XN-D0x"/>
+                        <outlet property="ratingTextField" destination="2N6-RD-xfo" id="XLq-Mn-4ch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrB-2t-W25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
