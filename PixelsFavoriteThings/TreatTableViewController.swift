@@ -48,14 +48,17 @@ class TreatTableViewController: UITableViewController {
         return cell
     }
     
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowAddTreatSegue" {
+            let destinationVC = segue.destination as? AddTreatViewController
+        } else if segue.identifier == "ShowTreatDetailSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? TreatDetailViewController else { return }
+            
+            destinationVC.treat = treats[indexPath.row]
+        }
     }
-    */
-    
 }
